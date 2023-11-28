@@ -1,0 +1,30 @@
+{
+  "name": "unicorn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --no-warnings --watch --env-file=.env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "packages": "npm list --depth=0",
+    "packages:clear": "rm -f -R node_modules && rm -f package-lock.json",
+    "packages:install": "npm run packages:clear && npm install",
+    "packages:outdated": "npm outdated --depth=0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "mongodb": "^6.3.0"
+  },
+  "type": "module",
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 80,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  }
+}
